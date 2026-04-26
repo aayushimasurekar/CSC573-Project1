@@ -1,0 +1,61 @@
+Requirements for IPsec Remote Access Scenarios
+Network Working Group
+Request for Comments: 3457
+January 2003
+
+REQUIREMENTS FOR IPSEC REMOTE ACCESS SCENARIOS
+
+Status of this Memo
+
+This memo provides information for the Internet community.
+It does not specify an Internet standard of any kind.
+
+ABSTRACT
+
+This document describes the requirements that must be met by
+IPsec implementations supporting remote access scenarios.
+Remote access allows users to securely connect to a private
+network from a remote location over the public Internet.
+
+INTRODUCTION
+
+IPsec provides a framework for securing IP communications.
+Remote access is one of the most common use cases for IPsec,
+allowing mobile workers and telecommuters to access corporate
+resources securely.
+
+REQUIREMENTS
+
+The following requirements apply to IPsec remote access:
+
+1. AUTHENTICATION
+   - Support for multiple authentication methods (certificates,
+     pre-shared keys, tokens).
+   - Mutual authentication between client and gateway.
+
+2. ADDRESS ASSIGNMENT
+   - Dynamic assignment of private IP addresses to clients.
+   - Support for DNS and WINS server configuration.
+
+3. SPLIT TUNNELING
+   - Ability to route only certain traffic through the VPN.
+   - Policy-based routing decisions.
+
+4. NAT TRAVERSAL
+   - IPsec must function correctly behind NAT devices.
+   - UDP encapsulation of ESP packets is required.
+
+5. DEAD PEER DETECTION
+   - Both client and gateway must detect when the other
+     becomes unreachable and clean up state accordingly.
+
+SECURITY CONSIDERATIONS
+
+Remote access solutions must protect against replay attacks,
+man-in-the-middle attacks, and unauthorized access attempts.
+Strong encryption algorithms (AES, 3DES) must be supported.
+
+CONCLUSION
+
+These requirements serve as a baseline for interoperable
+IPsec remote access implementations across vendors.

@@ -1,0 +1,30 @@
+A Proferred Official ICP
+Network Working Group
+Request for Comments: 123
+April 1971
+
+A PROFERRED OFFICIAL ICP
+
+This RFC specifies the ICP (Initial Connection Protocol) to be used
+for connecting to logger processes on ARPANET hosts.
+
+The ICP described here is the one currently in use on the ARPANET
+and is hereby proposed as the official ICP for all ARPANET hosts.
+
+BACKGROUND
+
+The need for a standard ICP has been recognized for some time.
+Several ICPs have been proposed and used, but none has been
+officially adopted. This RFC proposes one for official use.
+
+THE PROTOCOL
+
+The ICP works as follows:
+1. The using host connects to the serving host's logger socket.
+2. The serving host sends a 32-bit even number S.
+3. The serving host breaks the connection.
+4. The using host connects to socket S and S+1.
+5. Full duplex connection is established.
+
+This protocol ensures reliable connection establishment between
+any two ARPANET hosts regardless of their internal architecture.

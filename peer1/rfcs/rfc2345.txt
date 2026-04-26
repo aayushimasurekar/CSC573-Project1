@@ -1,0 +1,44 @@
+Domain Names and Company Name Retrieval
+Network Working Group
+Request for Comments: 2345
+May 1998
+
+DOMAIN NAMES AND COMPANY NAME RETRIEVAL
+
+Status of this Memo
+
+This memo provides information for the Internet community.
+It does not specify an Internet standard of any kind.
+
+ABSTRACT
+
+This document discusses the retrieval of company names using
+the Domain Name System (DNS). It explores methods by which
+company information can be associated with domain names and
+proposes a framework for standardized retrieval.
+
+INTRODUCTION
+
+As the Internet has grown, the need to associate human-readable
+company names with domain names has become increasingly important.
+Current DNS infrastructure supports IP address resolution but
+lacks a standardized mechanism for company name lookup.
+
+PROPOSED SOLUTION
+
+We propose an extension to DNS that allows:
+1. Forward lookup: domain name -> company name
+2. Reverse lookup: company name -> domain name(s)
+3. Attribute lookup: company name -> contact info, address, etc.
+
+SECURITY CONSIDERATIONS
+
+Any system that maps company names to domain names must be
+resistant to spoofing and unauthorized modifications.
+Authentication mechanisms should be employed to ensure
+integrity of the company name database.
+
+CONCLUSION
+
+A standardized company name retrieval system would greatly
+benefit Internet users and businesses alike.

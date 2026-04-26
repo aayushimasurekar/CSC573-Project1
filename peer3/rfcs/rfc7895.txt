@@ -1,0 +1,70 @@
+YANG Module Library
+Network Working Group
+RFC 7895
+June 2016
+
+Abstract
+
+This document describes a YANG library that provides information
+about all the YANG modules used by a network management server.
+Simple caching mechanisms are provided to allow clients to minimize
+retrieval of this information.
+
+Status of This Memo
+
+This is an Internet Standards Track document. This document is a
+product of the Internet Engineering Task Force (IETF). It represents
+the consensus of the IETF community. It has received public review
+and has been approved for publication by the Internet Engineering
+Steering Group (IESG).
+
+Copyright Notice
+
+Copyright (c) 2016 IETF Trust and the persons identified as the
+document authors. All rights reserved.
+
+1. Introduction
+
+There is a need for standard mechanisms to identify the YANG modules
+and submodules that are in use by a server that implements one or
+more YANG data models. If a large number of YANG modules are in use,
+then the YANG library provides a way to identify these modules in
+a scalable manner.
+
+2. YANG Module Library
+
+The YANG module library provides a list of all YANG modules supported
+by the server. Each module entry includes the module name, revision,
+namespace, and a list of supported features and deviations.
+
+3. Caching
+
+A content identifier is provided so that clients can cache the
+module list and only re-retrieve it when the content changes.
+The server must update this identifier whenever the set of modules
+changes.
+
+4. Security Considerations
+
+The YANG module library may expose sensitive information about the
+server's capabilities. Access control mechanisms should be used to
+restrict access to this information where appropriate.
+
+5. IANA Considerations
+
+This document registers a URI in the IETF XML registry and a YANG
+module in the YANG Module Names registry.
+
+Authors' Addresses
+
+Andy Bierman
+YumaWorks
+Email: andy@yumaworks.com
+
+Martin Bjorklund
+Tail-f Systems
+Email: mbj@tail-f.com
+
+Kent Watsen
+Juniper Networks
+Email: kwatsen@juniper.net

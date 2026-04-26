@@ -1,0 +1,79 @@
+The Key ID Information Type for the General Extension Items in Multimedia Internet KEYing (MIKEY)
+Network Working Group
+RFC 4563
+June 2006
+
+Abstract
+
+This memo specifies a new Type for the General Extension payload in
+the Multimedia Internet KEYing (MIKEY) protocol. The General
+Extension payload in MIKEY is used to carry general extensions that
+do not fit within the existing MIKEY payloads. The Key ID Information
+Type allows carrying a key identifier within a MIKEY message.
+
+Status of This Memo
+
+This document specifies an Internet standards track protocol for the
+Internet community, and requests discussion and suggestions for
+improvements. Distribution of this memo is unlimited.
+
+Copyright Notice
+
+Copyright (C) The Internet Society (2006). All Rights Reserved.
+
+1. Introduction
+
+The Multimedia Internet KEYing (MIKEY) protocol is used for key
+management in multimedia sessions. MIKEY supports several key
+distribution methods and is extensible through the General Extension
+payload.
+
+This document defines a new Information Type for the General Extension
+payload that allows a key identifier to be carried within MIKEY
+messages. Key identifiers are useful for correlating keying material
+across different protocol messages and sessions.
+
+2. Key ID Information Type
+
+The Key ID Information Type is defined for use in the General
+Extension payload of MIKEY. It contains a key identifier that can
+be used by the communicating parties to reference specific keying
+material.
+
+The format of the Key ID Information Type is as follows:
+
+   Type: 3
+   Length: variable
+   Key ID Type: 1 octet
+   Key ID: variable length
+
+3. Use of Key ID
+
+The Key ID Information Type may be included in any MIKEY message.
+The receiver should use the Key ID to look up the associated keying
+material in its local key store.
+
+4. Security Considerations
+
+The Key ID itself does not provide any security. The security of
+the key identified by the Key ID depends entirely on the security
+of the mechanisms used to distribute and protect that key.
+
+Care should be taken when exposing key identifiers, as they may
+reveal information about the keying infrastructure to an attacker.
+
+5. IANA Considerations
+
+This document registers a new value in the MIKEY General Extension
+Information Type registry.
+
+Authors' Addresses
+
+Elisabetta Carrara
+Royal Institute of Technology
+Stockholm, Sweden
+Email: carrara@kth.se
+
+Goran AP Eriksson
+Ericsson Research
+Email: Goran.AP.Eriksson@ericsson.com
